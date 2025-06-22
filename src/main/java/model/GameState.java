@@ -19,7 +19,7 @@ public class GameState {
         return currentPlayer;
     }
 
-    public boolean isTerminal() {
+    public boolean isOver() {
         return getWinner() != null || isDraw();
     }
 
@@ -51,7 +51,7 @@ public class GameState {
 
     public List<GameState> getNextStates() {
         List<GameState> states = new ArrayList<>();
-        if (isTerminal()) return states;
+        if (isOver()) return states;
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {

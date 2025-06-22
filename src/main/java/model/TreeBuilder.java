@@ -16,7 +16,7 @@ public class TreeBuilder {
             GameNode currentNode = queue.poll();
             GameState currentState = currentNode.getState();
 
-            if (currentState.isTerminal()) {
+            if (currentState.isOver()) {
                 setTerminalProbability(currentNode, rootPlayer);
                 continue;
             }
