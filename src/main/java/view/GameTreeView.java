@@ -143,7 +143,6 @@ public class GameTreeView extends ScrollPane {
                 GameNode node = layer.get(i);
                 double x = startX + (i - offset) * H_SPACING;
                 double y = startY + depth * V_SPACING;
-                System.out.printf("Drawing node: %.1f, %.1f", x, y);
                 if (nodePositions.containsKey(node)) {
                     offset++;
                 } else {
